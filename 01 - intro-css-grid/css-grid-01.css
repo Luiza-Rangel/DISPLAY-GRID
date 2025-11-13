@@ -14,10 +14,23 @@
     column-gap: 20px; */
 
     gap: 10px 20px;
+    border: 2px solid;
+
+    /* alinhar no eixo horizontal
+    justify-items: stretch;
+    /*Alinhar no eixo vertical*/
+    /* align-items: stretch; */
+
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+
 
 }
 
 .gridItem{
     background-color: aqua;
-
+    width: 200px;
+    height: 200px;
+  
 }
