@@ -10,11 +10,16 @@
 
 }
 
+/*Ajusta o tamanho das imagens*/
 .box img{
     width: 150px;
     height: 150px;
     margin: 10px;
     border-radius: 100%;
     border: 4px solid var(--header-light);
+}
+
+.header__container{
+    height: 70px;
 }
 
