@@ -55,3 +55,7 @@
     border-top: 10px solid tomato;
     display: block;
 }
+
+@media(max-width: 600px){
+    
+}
