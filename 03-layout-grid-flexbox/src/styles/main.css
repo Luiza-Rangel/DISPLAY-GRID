@@ -21,6 +21,7 @@
     padding: 10px;
 }
 
+/* CSS FLEXBOX 1 */
 .flex{
     display: flex;
     flex-wrap: wrap;
@@ -33,6 +34,7 @@
     margin: 10px;
 }
 
+/* CSS GRID 1 */
 .grid1{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -42,6 +44,7 @@
     grid-gap: 20px;
 }
 
+/* Dividir em 2 colunas a partir do 4º filho direto do grid1 */
 .grid1 > div:nth-child(n + 4) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -57,5 +60,74 @@
 }
 
 @media(max-width: 600px){
-    
+    .grid1{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid1 > div:nth-child(n + 4) {
+        display: block;
+    }
+
+    .grid1 > div.anuncio {
+        grid-column: auto;
+        grid-row: auto;
+        order: -1;
+    }
+}
+
+.grid2{
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-gap: 20px;
+    max-width: 800px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .grid2{
+        grid-template-columns: 1fr;
+    }
+    .sidebar{
+        display: flex;
+        overflow: scroll;
+    }
+
+    .sidebar > div{
+    flex: 1 0 200px;
+    margin: 0 10px;
+}
+}
+
+.grid3{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 10px;
+}
+
+.grid3-item:nth-child(1){
+    grid-row: 1 / 3;
+}
+
+.grid3-item{
+    display: grid;
+}
+
+.grid3-item img{
+    grid-column: 1;
+    grid-row:  1/3;
+    align-self: end;
+
+}
+
+.grid3-item p{
+    background: black;
+    padding: 10px;
+    color: aliceblue;
+    grid-column: 1;
+    grid-row: 2;
+    align-self: end;
 }
